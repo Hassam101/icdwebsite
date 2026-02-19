@@ -12,7 +12,7 @@ const OurTutors = () => {
   const tutors = [
     {
       id: 1,
-      name: "Aima Nazir",
+      name: "Saima Nazir",
       designation: "Educational Leader, Master Trainer, Public Speaker",
       image: saimaImage,
       linkedin: "https://www.linkedin.com/in/saima-nazir-8a5552b6/", // Update with actual URL
