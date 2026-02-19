@@ -1,0 +1,232 @@
+/* components/FindMoreCards.css */
+
+.find-more-cards-wrapper {
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+}
+
+.find-more-cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.find-more-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.find-more-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.find-more-card-header {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.find-more-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.find-more-card:hover .find-more-card-image {
+  transform: scale(1.05);
+}
+
+.find-more-card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.find-more-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.find-more-card-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #4a9eff;
+  border-radius: 2px;
+}
+
+/* Links Grid for First Card */
+.find-more-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.find-more-links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.find-more-card-link {
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.4rem 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  background-color: #3c44b5;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  
+}
+
+.find-more-card-link:hover {
+  color: #fff;
+  transform: translateX(5px);
+  border-bottom-color: #4a9eff;
+}
+
+/* Card 2 & 3 Styles */
+.find-more-card-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.find-more-card-button {
+  background-color: #3c44b5;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.find-more-card-button:hover {
+  background-color: #3c44b5;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .find-more-cards-container {
+    gap: 1.5rem;
+  }
+  
+  .find-more-card-header {
+    height: 180px;
+  }
+  
+  .find-more-links-grid {
+    gap: 0.75rem;
+  }
+  
+  .find-more-card-link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .find-more-cards-wrapper {
+    padding: 3rem 1.5rem;
+  }
+  
+  .find-more-cards-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 500px;
+  }
+  
+  .find-more-card-header {
+    height: 220px;
+  }
+  
+  .find-more-card-title {
+    font-size: 1.4rem;
+  }
+  
+  .find-more-links-grid {
+    gap: 1rem;
+  }
+  
+  .find-more-card-link {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .find-more-cards-wrapper {
+    padding: 2rem 1rem;
+  }
+  
+  .find-more-card-header {
+    height: 180px;
+  }
+  
+  .find-more-card-content {
+    padding: 1.2rem;
+  }
+  
+  .find-more-card-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .find-more-links-grid {
+    gap: 0.75rem;
+  }
+  
+  .find-more-card-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+  }
+  
+  .find-more-card-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+  .find-more-links-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .find-more-links-column {
+    gap: 0.5rem;
+  }
+}

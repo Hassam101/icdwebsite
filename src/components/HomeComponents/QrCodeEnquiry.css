@@ -1,0 +1,313 @@
+.qrcode-enquiry-section {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.qrcode-enquiry-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.qrcode-enquiry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* Left Column - QR Code */
+.qrcode-enquiry-qr-column {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.qrcode-enquiry-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 2.5rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.qrcode-enquiry-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.qrcode-enquiry-main-icon {
+  font-size: 3rem;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.qrcode-enquiry-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.qrcode-enquiry-image-container:hover {
+  transform: scale(1.05);
+}
+
+.qrcode-enquiry-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 1rem;
+  object-fit: contain;
+}
+
+.qrcode-enquiry-instruction {
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Right Column - Content */
+.qrcode-enquiry-content-column {
+  padding-left: 2rem;
+}
+
+.qrcode-enquiry-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.qrcode-enquiry-description {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.qrcode-enquiry-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  color: #667eea;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+}
+
+.qrcode-enquiry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  background: #f8f9fa;
+  border-color: #fff;
+}
+
+.qrcode-enquiry-button-arrow {
+  transition: transform 0.3s ease;
+}
+
+.qrcode-enquiry-button:hover .qrcode-enquiry-button-arrow {
+  transform: translateX(5px);
+}
+
+/* Modal Styles */
+.qrcode-enquiry-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.qrcode-enquiry-modal {
+  background: #fff;
+  border-radius: 24px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.qrcode-enquiry-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.qrcode-enquiry-modal-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.qrcode-enquiry-modal-content {
+  padding: 2.5rem;
+}
+
+.qrcode-enquiry-modal-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.qrcode-enquiry-modal-subtitle {
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.qrcode-enquiry-modal-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.qrcode-enquiry-modal-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background: #f8f9fa;
+  object-fit: contain;
+}
+
+.qrcode-enquiry-instructions {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.qrcode-enquiry-instruction {
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.qrcode-enquiry-instruction:last-child {
+  margin-bottom: 0;
+}
+
+.qrcode-enquiry-modal-link {
+  display: block;
+  text-align: center;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.qrcode-enquiry-modal-link:hover {
+  background: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .qrcode-enquiry-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .qrcode-enquiry-qr-column {
+    justify-content: center;
+  }
+
+  .qrcode-enquiry-content-column {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .qrcode-enquiry-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .qrcode-enquiry-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .qrcode-enquiry-section {
+    padding: 3rem 1rem;
+  }
+
+  .qrcode-enquiry-title {
+    font-size: 2rem;
+  }
+
+  .qrcode-enquiry-description {
+    font-size: 1rem;
+  }
+
+  .qrcode-enquiry-card {
+    padding: 1.5rem;
+  }
+
+  .qrcode-enquiry-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .qrcode-enquiry-modal-content {
+    padding: 1.5rem;
+  }
+
+  .qrcode-enquiry-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .qrcode-enquiry-modal-image {
+    width: 180px;
+    height: 180px;
+  }
+}

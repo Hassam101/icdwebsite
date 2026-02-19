@@ -1,0 +1,240 @@
+/* components/IhIcdPartnership.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .ih-icd-partnership-container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .ih-icd-partnership-card {
+    background: white;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .ih-icd-text-section {
+    flex: 1.5;
+    min-width: 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .ih-icd-image-section {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e1efff 100%);
+  }
+  
+  .ih-icd-main-heading {
+    font-size: 2.3rem;
+    color: #474eba;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  
+  .ih-icd-acronyms {
+    color: #464eb9;
+    font-weight: 800;
+  }
+  
+  .ih-icd-partnership-description {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+  
+  .ih-icd-benefits-heading {
+    font-size: 1.5rem;
+    color: #464eb9;
+    margin: 10px 0 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .ih-icd-benefits-icon {
+    color: #1a6bb3;
+    font-size: 1.3rem;
+  }
+  
+  .ih-icd-benefits-list {
+    list-style-type: none;
+    margin-bottom: 30px;
+  }
+  
+  .ih-icd-benefit-item {
+    padding: 10px 0;
+    padding-left: 50px;
+    position: relative;
+    color: #2d3748;
+    font-size: 1.05rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .ih-icd-benefit-item:hover {
+    transform: translateX(5px);
+  }
+  
+  .ih-icd-benefit-icon {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 36px;
+    height: 36px;
+    background-color: #e8f2ff;
+    color: #474eba;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .ih-icd-benefit-item:hover .ih-icd-benefit-icon {
+    background-color: #1a6bb3;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .ih-icd-partnership-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+  }
+  
+  .ih-icd-partnership-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .ih-icd-image-decoration {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(26, 107, 179, 0.05);
+    top: -50px;
+    right: -50px;
+  }
+  
+  .ih-icd-image-decoration-2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(26, 107, 179, 0.05);
+    bottom: -30px;
+    left: -30px;
+  }
+  
+  .ih-button-viewmore button {
+    background-color: #3c44b5;
+    width: 150px;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ih-button-viewmore button:hover {
+    background-color: #454ba2;
+    cursor: pointer;
+  }
+  
+  /* Animation for benefit items */
+  .ih-icd-benefit-item {
+    animation: fadeInLeft 0.5s ease forwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ih-icd-text-section,
+    .ih-icd-image-section {
+      flex: 100%;
+      padding: 30px 20px;
+    }
+  
+    .ih-icd-main-heading {
+      font-size: 1.8rem;
+    }
+  
+    .ih-icd-partnership-card {
+      flex-direction: column-reverse;
+    }
+    
+    .ih-icd-benefits-heading {
+      font-size: 1.3rem;
+    }
+    
+    .ih-icd-benefit-item {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ih-icd-text-section {
+      padding: 20px 15px;
+    }
+    
+    .ih-icd-main-heading {
+      font-size: 1.5rem;
+    }
+    
+    .ih-icd-partnership-description {
+      font-size: 0.95rem;
+    }
+    
+    .ih-icd-benefit-icon {
+      width: 30px;
+      height: 30px;
+      font-size: 0.9rem;
+      top: 12px;
+    }
+    
+    .ih-icd-benefit-item {
+      padding-left: 40px;
+    }
+    
+    .ih-button-viewmore button {
+      width: 130px;
+      height: 45px;
+      font-size: 14px;
+    }
+  }
